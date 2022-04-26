@@ -1,0 +1,18 @@
+<div
+  class="bg-slate-800 text-white text-lg rounded w-full h-80 flex flex-col mb-4 font-semibold shadow-sm shadow-slate-700"
+>
+  <div class="py-3 px-4 flex items-center justify-between">
+    <h3>{{ p.title }}</h3>
+    <button
+      class="py-1 px-3 bg-rose-500 text-white rounded-full hover:bg-rose-600"
+      (click)="click()"
+    >
+      X
+    </button>
+  </div>
+  <div class="overflow-hidden flex-1 rounded-b hover:opacity-70">
+    <a routerLink="/post/{{ p.id }}"
+      ><img src="{{ p.img }}" alt="post" class="block h-full w-full"
+    /></a>
+  </div>
+</div>

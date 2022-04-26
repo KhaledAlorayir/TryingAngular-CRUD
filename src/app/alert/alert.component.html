@@ -1,0 +1,11 @@
+<div
+  *ngIf="alert"
+  class="p-3 rounded w-1/2 mx-auto my-6 text-lg flex justify-between items-center"
+  [ngClass]="{
+    'bg-green-500': alert.type === 'Y',
+    'bg-red-500': alert.type === 'N'
+  }"
+>
+  <p>{{ alert?.msg }}</p>
+  <button (click)="CloseHandler()" class="hover:opacity-75">Close</button>
+</div>
